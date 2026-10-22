@@ -1,0 +1,302 @@
+body{
+    font-family: 'Manrope', sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f4f5fa; 
+}
+.signupBody{
+    box-shadow: 0 20px 40px #bcbfdb;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    width:100%;
+    max-width: 600px;
+}
+header{
+    justify-content: center;
+    display:flex;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    margin-right: 50px;
+}
+#reg{
+    text-align: center;
+    margin-top:-10px;
+    background-color: #EEF0FF;
+    border-radius:20px;
+    max-width: 250px;
+    margin-left: 110px;
+}
+
+#par1{
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 25px;
+}
+#signup{
+    display: flex;
+    flex-direction: column; 
+    gap: 12px; 
+    max-width:450px;
+    justify-content: center;
+}
+input{
+    padding:13px;
+    background-color: #EEF0FF;
+    border: none;
+    border-radius: 5px;
+}
+button{
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border:none;
+    background-color:#00174B;
+    color: white;
+    font-size:medium;
+}  
+.passwords1{
+    display: flex;
+    gap:10px;
+}
+.loginType{
+    display: flex;
+    gap:12px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease; 
+    cursor: pointer;  
+}
+.loginType:hover{
+    border-color: purple;
+}
+#card1{
+    display: block;
+    width:100%;
+    max-width:330px;
+    background-color: #EEF0FF;
+    text-align: center;
+    border-radius: 20px;
+}
+#card2{
+    display: block;
+    width:100%;
+    max-width:330px;
+    background-color: #EEF0FF;
+    text-align: center;
+    border-radius: 20px;
+}
+#signupButton{
+    height:20px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+    width:100%;
+    max-width: 450px;
+    padding:5px 30px;
+}
+#signupButton a{
+    text-decoration: none;
+    color: white;
+}
+.securityBox{
+    background-color: #EEF0FF;
+    width:100%;
+    max-width:450px;
+    border-radius: 10px;
+    padding:15px 30px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+.securityHeader{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:18px;
+}
+#sec2{
+    color: gray;
+    letter-spacing: 0.5px;
+}
+.securityBars{
+    display:flex;
+    gap:10px;
+    margin-bottom:30px;
+}
+.bars{
+    flex:1;
+    height:6px;
+    background-color: gray;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+#securityHint{
+    text-align: right;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+.signupBottom{
+    display:flex;
+    gap:30px;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+
+/* LOGIN PAGE */
+
+.loginBody{
+    box-shadow: 0 20px 40px #bcbfdb;
+    background-color: white;
+    border-radius: 20px;
+    padding: 70px;
+    width:100%;
+    max-width:600px;
+}
+#login{
+    display: flex;
+    flex-direction: column; 
+    gap: 12px; 
+    max-width:450px;
+    justify-content: center;
+}
+#loginButton{
+    height:20px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    width:100%;
+    max-width:400px;
+    padding:5px 30px;
+    display: flex;
+    flex-direction: column;
+}
+#loginButton a{
+    text-decoration: none;
+    color: white;
+}
+#login1{
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 25px;
+}
+#split{
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    gap:15px;
+    width:100%;
+    margin:20px 0;
+}
+#splitText{
+    color: #7a7a7a;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+#line{
+    flex:1;
+    height:1px;
+    background-color: darkgray;
+}
+#log2{
+    display:flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+}
+.loginType2{
+    display: flex;
+    gap:12px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+}
+#card3{
+    display: block;
+    width:100%;
+    max-width:330px;
+    background-color: #EEF0FF;
+    text-align: center;
+    border-radius: 20px;
+}
+#card4{
+    display: block;
+    width:100%;
+    max-width:330px;
+    background-color: #EEF0FF;
+    text-align: center;
+    border-radius: 20px;
+}
+#forgot{
+    text-decoration: none;
+}
+
+/* FORGOT PASSWORD PAGE */
+#reset{
+    text-align: center;
+}
+.resetCard1{
+    background-color: #EEF0FF;
+    width:100%;
+    max-width:500px;
+    border-radius: 10px;
+    padding:2px 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.cardHeader{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:18px;
+}
+#resetpar{
+    text-align:left;
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+.forgotPassbody{
+    box-shadow: 0 20px 40px #bcbfdb;
+    background-color: white;
+    border-radius: 20px;
+    padding: 70px;
+    width:100%;
+    max-width:500px;
+}
+#passEmail{
+    display: flex;
+    flex-direction: column; 
+    gap: 12px; 
+    max-width:500px;
+    justify-content: center;
+}
+#Active{
+    color:#346EF6;
+}
+#passwordhelp{
+    background-color:  #EEF0FF;
+    text-align: center;
+    padding:3px 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+#backtologin{
+    background-color:#edeff1;
+    color: #00174B;
+    text-decoration: none;
+    text-align: center;
+    padding:15px 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.forgotButtons{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+#minutes{
+    font-weight: bold;
+}
+#forgotHeader{
+    font-size: 80px;
+}
+

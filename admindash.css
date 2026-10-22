@@ -1,0 +1,498 @@
+body{
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    background-color: #f4f5fa; 
+}
+
+.memberdash{
+    display: flex;
+    gap:20px;
+    background-color:white;
+    margin:0;
+}
+
+#dashlogo{
+    display:flex;
+}
+.headerLinks{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    white-space: nowrap;
+    padding:30px 20px;
+    
+}
+#homelink,
+#searchlink,
+#mybooksLink,
+#profileLink {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#homelink::after,
+#searchlink::after,
+#mybooksLink::after,
+#profileLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+#homelink:hover,
+#searchlink:hover,
+#mybooksLink:hover,
+#profileLink:hover {
+  color: #007bff;
+}
+
+#homelink:hover::after,
+#searchlink:hover::after,
+#mybooksLink:hover::after,
+#profileLink:hover::after {
+  width: 100%;
+}
+#adminlink{
+    justify-content:end;
+    white-space: nowrap;
+    padding:30px 20px;
+    margin-left: auto;
+    padding-right:0px;
+    cursor: pointer;
+}
+#adminlink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+#adminlink:hover {
+  color: #007bff;
+}
+
+#adminlink:hover::after {
+  width: 100%;
+}
+#searchlink a,
+#mybooksLink a,
+#adminlink a{
+    text-decoration: none;
+    color:black;
+}
+.righticons{
+    justify-content:end;
+    white-space: nowrap;
+    padding:30px 20px;
+    padding-right:100px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.welcomeBadge{
+    display:flex;
+    width:100%;
+    max-width:max-content;
+    padding:2px 50px;
+    gap: 60px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px #bcbfdb;
+    margin-left: 200px;
+    background-color: white;
+}
+.welcomebuttons{
+    display:flex;
+    gap:30px;
+    padding:57px 0px;
+    cursor: pointer;
+}
+#searchCat{
+    color: white;
+    background-color: black;
+    display: block;
+    border-radius: 20px;
+    width:200px;
+    text-align: center;
+}
+#searchCat a{
+  text-decoration: none;
+  color: white;
+}
+#homelink a{
+  text-decoration: none;
+  color: black;
+}
+#renewLoans{
+    display:block;
+    border-color: darkgray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    width:200px;
+    text-align: center;
+}
+.fourcards{
+    display: flex;
+    gap:90px;
+}
+
+
+.totalbooks{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    height:200px;
+    max-width:200px;
+    padding:16px 14px;
+    gap: 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px #bcbfdb;
+    margin-left: 200px;
+    background-color: white;
+}
+.available{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    max-width:200px;
+    padding:16px 14px;
+    gap:12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px #bcbfdb;
+    margin-left: 20px;
+    background-color: white;
+}
+.borrowed{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    max-width:200px;
+    padding:16px 14px;
+    gap: 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px #bcbfdb;
+    margin-left: 20px;
+    background-color: white;
+}
+.members{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    max-width:200px;
+    padding:16px 14px;
+    gap: 12px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px #bcbfdb;
+    margin-left: 20px;
+    background-color: white;
+}
+.totalbooks h2 span, .available h2 span,
+.borrowed h2 span, .members h2 span {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  margin-right: 4px;
+}
+.totalbooks p, .available p,
+.borrowed p, .members p {
+  font-size: 10px;
+  color: #444;
+  margin: 0;
+}
+#totalheader i, #availheader i,
+#borrowedheader i, #membersheader i {
+  padding: 6px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 8px;
+}
+.progress {
+  width: 100%;
+  height: 8px;
+  background: #dbeafe;       
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 84%;                
+  height: 100%;
+  background: #7f99e0;        
+  border-radius: 999px;
+}
+
+.recents{
+    max-width: max-content;
+    width:100%;
+    max-height:auto;
+    background-color: white;
+    box-shadow: 0 20px 40px #bcbfdb;
+    border-radius: 20px;
+    margin-top:60px;
+    margin-left:200px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.recentheader{
+    display: flex;
+    white-space: nowrap;
+    padding:30px 25px;
+    padding-right:100px;
+    font-size: 20px;
+    margin-left: 200px;
+}
+.bookdisplay{
+    margin-left: 100px;
+}
+#fbimage{
+    float:left;
+    margin-right: 20px;
+}
+#sbimage{
+    float:left;
+    margin-right: 20px;
+}
+#tbimage{
+    float:left;
+    margin-right: 20px;
+}
+
+.updates{
+    max-width: max-content;
+    max-height:auto;
+    background-color: white;
+    box-shadow: 0 20px 40px #bcbfdb;
+    border-radius: 20px;
+    margin-top:-700px;
+    margin-left:auto;
+    margin-right: 300px;
+    padding:10px 20px;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+#up1{
+    float:left;
+    margin-right: 20px;
+}
+#up2{
+    float:left;
+    margin-right: 20px;
+}
+#up3{
+    float:left;
+    margin-right: 20px;
+}
+
+.navbox{
+    margin-top: 250px;
+    margin-left: 200px;
+
+    max-width: max-content;
+    width:100%;
+    max-height:auto;
+    background-color: white;
+    box-shadow: 0 20px 40px #bcbfdb;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+.subtitle {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 700px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px #007bff;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #999;
+  margin: 5px 0 0 0;
+}
+
+footer{
+    display:flex;
+    gap:30px;
+    background-color: white;
+    padding:50px 20px;
+}
+#footerLinks{
+    text-align: center;
+    display:flex;
+    gap:20px;
+    margin-left: auto;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+
+/* ===== FIXES: paste at bottom of style.css ===== */
+
+/* Stop nav from wrapping weirdly */
+.memberdash {
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* Remove the huge left margins pushing content right */
+.welcomeBadge,
+.totalbooks,
+.recents,
+.navbox,
+.recentheader {
+  margin-left: 0;
+}
+
+/* Center the whole page content in a max-width column */
+.welcomeBadge,
+.fourcards,
+.recents,
+.updates,
+.navbox,
+.middle-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Welcome badge: proper layout */
+.welcomeBadge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  padding: 20px 30px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.welcomebuttons {
+  padding: 0;
+  gap: 15px;
+}
+
+#searchCat,
+#renewLoans {
+  padding: 10px 0;
+}
+
+/* Stat cards row: even spacing */
+.fourcards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.totalbooks,
+.available,
+.borrowed,
+.members {
+  width: auto;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  padding: 20px 18px;
+}
+
+/* Middle section: recents + updates side by side, NO overlap */
+.middle-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.recents,
+.updates {
+  margin: 0;
+  width: auto;
+  max-width: none;
+  padding: 25px;
+  box-shadow: 0 20px 40px #bcbfdb;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* KILL the two overlap-causing hacks */
+.updates {
+  margin-top: 0;
+  margin-right: 0;
+}
+.navbox {
+  margin-top: 0;
+}
+
+/* Recent header clean */
+.recentheader {
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Book rows using flex instead of float */
+.bookdisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 0;
+}
+
+/* Quick nav grid */
+.navbox {
+  padding: 25px;
+  margin-bottom: 30px;
+  width: auto;
+}
+
+/* Footer tidy up */
+footer {
+  padding: 30px 40px;
+  align-items: center;
+}
+
+#footerLinks {
+  margin-right: 0;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard</title>
+    <link rel="stylesheet" href="memberdash.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4df559c6eb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+
+        <section class="memberdash">
+            
+        <div id="dashLogo">
+        <img src="./images/libra_logo.png" width="100">
+        </div>
+        <h2>Libra</h2>
+
+        <div class="headerLinks">
+
+            <div id="homelink">
+                <a href="dashboard.html"> 
+                Home
+                </a>
+            </div>
+
+            <div id="searchlink">
+                <a href="booksearch.html">
+                Search Books
+                </a>
+            </div>
+
+            <div id="mybooksLink">
+                <a href="bookManagement.html">
+                My Books
+                 </a>
+            </div>
+
+            <div id="profileLink">
+                Profile
+            </div>
+
+        
+        </div>
+
+            <div id="adminlink">
+                <a href="admindash.html"> 
+                Admin portal
+                </a>
+            </div>
+            <div class="righticons"> 
+            <i class="fa-solid fa-magnifying-glass" style="color: rgb(20, 21, 22);"></i>
+            <i class="fa-regular fa-bell" style="color: rgb(20, 21, 22);"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket" style="color: rgb(20, 21, 22);"></i>
+            </div>
+
+        </section>
+
+    </header>
+    <main>
+
+        <section class="welcomeBadge">
+
+            <div id="welcomepar"> 
+
+            <h2>Welcome back, Dr Zandile Zulu</h2>
+            <p>Curator of Applied Semantics. Your digital patron desk is up to date with 3 physical items in active circulation.</p>
+            </div>
+
+            <div class="welcomebuttons">
+                <div id="searchCat">
+                    <p><i class="fa-solid fa-download" style="color: white;"></i><a href="booksearch.html">Search Catalog</a></p>
+                </div>
+
+                <div id="renewLoans">
+                    <p><i class="fa-solid fa-arrows-rotate" style="color: rgb(20, 21, 22);"></i>Renew All Loans</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="fourcards"> 
+
+        <article class="capacity">
+            <div id="capheader"> 
+            <i class="fa-solid fa-book-bookmark" style="color: rgb(177, 151, 252); font-size: 24px;"></i>
+            <h3>Capacity: 3/10</h3>
+            </div>
+
+            <h2><span>3</span>  Books </h2>
+            <p>1 physical itemdue this current week.</p>
+        </article>
+
+        <article class="due">
+            <div id="dueheader"> 
+            <i class="fa-solid fa-hourglass" style="color: rgb(255, 212, 59);font-size: 24px;"></i>
+            <h3>Due in 3 days</h3>
+            </div>
+
+            <h2><span>1</span> Item Pending  </h2>
+            <p>The Design of Everyday things.</p>
+        </article>
+
+        <article class="standing">
+            <div id="standingheader"> 
+            <i class="fa-solid fa-check-double" style="color: rgb(226, 139, 229);font-size: 24px;"></i>
+            <h3>Good Standing</h3>
+            </div>
+
+            <h2><span>R0.00 </span></h2>
+            <p>No account fines or overdue fees.</p>
+        </article>
+
+        <article class="goal">
+            <div id="goalheader"> 
+            <i class="fa-solid fa-chart-line" style="color: rgb(99, 230, 190);font-size: 24px;"></i>
+            <h3>2026 Goal/50</h3>
+            </div>
+
+            <h2><span>42</span> Read</h2>
+
+            <div class="progress">
+            <div class="progress-fill"></div>
+            </div>
+
+            <p>84% of target...8 left .</p>
+            <div class="goalp">
+                <span>84% of annual scholarly target</span>
+                <span>8 left</span>
+                </div>
+
+                <div class="goal-footer">
+                <span>Last logged: 3 days ago</span>
+                <a href="#">Export Log</a>
+            </div>
+        </article>
+
+        </section>
+
+        <section class="currentLoans">
+            <article class="CLheader">
+                <div id="par">
+                <h2>Your Current Loans & Reservations </h2>
+                <p>Manage loan renewals, view due dates, and generate digital return reciepts.</p>
+                </div>
+
+                <div class="CLbuttons">
+                    <button id="allborrow">All Borrowed(3) </button>
+                    <button id="reserved">Reserved(1) </button>
+                    <button id="history">History </button>
+                </div>
+
+            </article>
+
+            <section class="bookdisplay"> 
+            <article class="firstbook">
+                <div id="FBheader">
+                    <div id="fbimage"> 
+                    <img src="./images/agggtm.png" width="100px">
+                    </div>
+                    <h2> A Good Girl's Guide To Murder</h2>
+                    <p>By Holly Jackson - Published 2019 - Physical copy</p>
+                    <p> Borrowed: 24 September 2026</p>
+                    <p>Due: 5 October 2026 </p>
+
+                    <div id="bookbuttons">
+                    <button>Renew(14d) </button>
+                    <button>Return </button>
+                     </div>
+
+                </div>
+
+            </article>
+
+             <article class="secondbook">
+                <div id="SBheader">
+                    <div id="sbimage"> 
+                    <img src="./images/bridgerton.png" width="100px">
+                    </div>
+                    <h2>Bridgerton: The Viscount Who Loved Me</h2>
+                    <p>By Julia Quinn - Published 2000 - Digital Copy</p>
+                    <p> Borrowed: 2 September 2026</p>
+                    <p>Due: 16 September 2026 </p>
+
+                    <div id="bookbuttons"> 
+                    <button>Renew immediately </button>
+                    <button>Return </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="thirdbook">
+                <div id="TBheader">
+                    <div id="tbimage">
+                    <img src="./images/toalltheboysivelovedbefore.png" width="100px">
+                    </div>
+                    <h2>To All The Boys I've Loved Before</h2>
+                    <p>By Jenny Han - Published 2014 - Digital Copy</p>
+                    <p> Borrowed: 22 September 2026</p>
+                    <p>Due:6 October 2026 </p>
+
+                    <div id="bookbuttons"> 
+                    <button>Renew(10d) </button>
+                    <button>Return </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+            </section>
+
+        </section>
+
+        <section class="recs">
+                <div id="recheader">
+                    <h2><i class="fa-solid fa-book-bookmark" style="color: rgb(116, 192, 252);"></i> Recommended</h2>
+                    <p style="color: rgb(77, 198, 238);"> View all</p>
+                </div>
+                
+               <div id="rec1">
+                <div id="rp1"> 
+                <img src="./images/atomic.png" width="100">
+                </div>
+                <h2> Atomic Habits</h2>
+                <p> James Clear</p>
+               </div>
+
+                <div id="rec2">
+                <div id="rp2"> 
+                <img src="./images/invisible.png" width="100">
+                </div>
+                <h2> The Invisible Life of Addie LaRue</h2>
+                <p>V.E Schwab </p>
+               </div>
+
+                <div id="rec3">
+                <div id="rp3">
+                    <img src="./images/mockingbird.png" width="100">
+                </div>
+                <h2> To Kill A Mockingbird</h2>
+                <p> Harper Lee</p>
+               </div>
+
+            </section>
+
+            <section class="workinghours">
+                <div id="workingheader">
+                    <h2><i class="fa-regular fa-clock" style="color: rgb(116, 192, 252);"></i>Library Hours & Desk</h2>
+                </div>
+                <div id="workingbody">
+                    <h4>Main reading Room</h4><p>8AM - 10PM</p>
+                    <h4>Special Collections & Activities</h4> <p>9AM - 6PM</p>
+                    <h4>Digital Help & Scan Lab</h4> <p>24/7 Scholar Terminal</p>
+                </div>
+            </section>
+
+            <section class="graphs">
+                <div id="graphsheader">
+                    <h2> 2026 Research Borrowing Cadence</h2>
+                    <p>Volumes checked out per month.</p>
+                </div>
+
+                <div class="chart">
+    
+                <div class="bar-column">
+                    <div class="bar" style="height: 30%;"></div> 
+                    <span class="label">JUN</span>
+                </div>
+
+                <div class="bar-column">
+                    <div class="bar" style="height: 50%;"></div>
+                    <span class="label">JUL</span>
+                </div>
+
+                <div class="bar-column">
+                    <div class="bar" style="height: 70%;"></div>
+                    <span class="label">AUG</span>
+                </div>
+
+                <div class="bar-column">
+                    <div class="bar" style="height: 40%;"></div>
+                    <span class="label">SEP</span>
+                </div>
+
+                </div>
+
+            </section>
+
+
+    </main>
+
+    <footer>
+        
+        <img src="./images/libra_logo.png" width="100">
+        <h4>Libra</h4>
+        <p>Digital Archive and Research Library</p>
+        
+
+        <div id="footerLinks"> 
+        <h4>Catalog</h4>
+        <h4>Borrowing Policy</h4>
+        <h4>Contact</h4>
+        <h4>Admin Portal</h4>
+        </div>
+    </footer>
