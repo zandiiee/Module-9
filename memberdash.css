@@ -101,6 +101,10 @@ body{
     font-size: 20px;
     cursor: pointer;
 }
+#profileLink a{
+  text-decoration: none;
+  color: black;
+}
 .welcomeBadge{
     display:flex;
     width:100%;
@@ -372,7 +376,7 @@ body{
     background-color: white;
     box-shadow: 0 20px 40px #bcbfdb;
     border-radius: 20px;
-    margin-top:-900px;
+    margin-top:-100px;
     margin-left:auto;
     margin-right: 50px;
     padding:10px 20px;
@@ -405,59 +409,7 @@ body{
     display:flex;
     flex-direction: column;
 }
-.chart{
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-end;          
-    height: 200px;                
-    width: 100%;
-    max-width: 600px;             
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee; 
-    margin-left: 100px;
-}
-.bar-column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;                 
-    width: 15%;                   
-    position: relative;  
-}
-.bar{
-    width: 100%;
-    background-color: #e6eeff;      
-    border-radius: 4px 4px 0 0;    
-    transition: height 0.3s ease;  
-}
-.bar-active{
-    background-color: #0b5ed7; 
-}
-.label{
-    margin-top: 10px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #888;
-    text-transform: uppercase;
-}
-.label.active-text {
-    color: #0b5ed7;                
-}
-.graphs{
-   background-color:white;
-    width:100%;
-    max-width:800px;
-    margin:0 200px;
-    margin-bottom: 20px;
-    padding:0 10px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px #bcbfdb;
-}
-#graphsheader{
-    margin-left: 200px;
-    padding-top: 20px;
-}
+
 footer{
     display:flex;
     gap:30px;
@@ -740,3 +692,365 @@ footer{
   background: #0b0f1a;
   color: #fff;
 }
+
+/* =========================================
+   FIX: Align Buttons to Top Right
+   ========================================= */
+
+.firstbook, .secondbook, .thirdbook {
+    position: relative;
+    padding-top: 20px; /* Adds a little breathing room at the top of the card */
+}
+
+#bookbuttons {
+    position: absolute;
+     right: 50px;       
+    top: 20px;        /* Moves the button higher up, aligning with the top of the image */
+    margin: 0 !important; 
+    padding: 0;
+    display: flex;
+}
+
+/* Ensure the button styling stays intact */
+#bookbuttons button {
+    padding: 8px 18px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    background: #0b0f1a;
+    color: #fff;
+}
+
+#bookbuttons button:hover {
+    background: #333;
+}
+
+/* =========================================
+   FIX: EXPAND LEFT SIDE, KEEP RIGHT SIDE PINNED
+   ========================================= */
+
+/* 1. Remove the width restrictions on the main containers */
+.welcomeBadge, 
+.currentLoans {
+    max-width: none !important; /* Forces them to fill available space */
+    width: auto !important;
+    margin-right: 350px !important; /* Leaves exactly enough room on the right for the sidebar */
+    box-sizing: border-box;
+}
+
+/* 2. Push the sidebar back to the right and pull it up */
+.recs {
+    float: right;
+    width: 300px !important;
+    margin-top: -700px !important; /* Pulls the sidebar up to sit next to the books */
+    margin-right: 50px !important;
+    clear: none !important;
+}
+
+.workinghours {
+    float: right;
+    width: 300px !important;
+    margin-top: 20px !important;
+    margin-right: 50px !important;
+    clear: right !important; /* Stacks it perfectly under Recommendations */
+}
+
+/* 3. Ensure the graphs section drops down below both columns */
+.graphs {
+    clear: both;
+    width: 100% !important;
+    max-width: none !important;
+    margin-top: 40px !important;
+}
+
+/* 4. Fix the book items inside the now-wider container */
+.bookdisplay {
+    margin-left: 20px !important;
+}
+
+/* =========================================
+   ULTIMATE LAYOUT & ALIGNMENT FIX
+   ========================================= */
+
+/* 1. FORCE MAIN INTO A 2-COLUMN GRID */
+main {
+    display: grid !important;
+    grid-template-columns: 1fr 350px !important; /* Left side (Books) | Right side (Sidebar) */
+    gap: 30px !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    align-items: start !important;
+}
+
+/* 2. TOP SECTIONS SPAN FULL WIDTH */
+.welcomeBadge, 
+.fourcards,
+.graphs {
+    grid-column: 1 / -1 !important; 
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Fix the four cards to spread out */
+.fourcards {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 50px !important;
+}
+
+/* =========================================
+   FIX: EVEN SPACING FOR THE 4 TOP CARDS
+   ========================================= */
+
+.capacity, 
+.due, 
+.standing, 
+.goal {
+    /* Removes the old fixed margins that were crushing the layout */
+    margin-left: 0 !important; 
+    margin-right: 0 !important;
+    
+    /* Ensures they stretch to fill their grid columns evenly */
+    width: 70% !important; 
+    max-width: none !important;
+}
+
+/* 3. LEFT COLUMN (BOOKS) */
+.currentLoans {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 0 30px 0 !important;
+    box-sizing: border-box;
+}
+
+/* 4. RIGHT COLUMN (SIDEBAR) */
+.recs {
+    grid-column: 2 !important;
+    grid-row: 4 / span 1 !important; /* Sits next to Books */
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: white;
+    border-radius: 20px;
+    padding: 20px !important;
+    box-sizing: border-box;
+}
+
+
+
+.workinghours {
+    grid-column: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    background: white;
+    border-radius: 20px;
+    padding: 20px !important;
+    box-sizing: border-box;
+}
+
+/* 5. FIX THE BOOK ITEMS INSIDE THE LEFT COLUMN */
+.bookdisplay {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 0 20px !important;
+    margin: 0 !important;
+}
+
+/* Force the book cards to contain their content */
+.firstbook, .secondbook, .thirdbook {
+    position: relative !important;
+    background: #f8f9fa !important;
+    border-radius: 12px !important;
+    padding: 20px 20px 20px 140px !important; /* Left padding leaves room for image */
+    min-height: 140px !important;
+    border: 1px solid #e5e7eb !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Pin the image to the left side of the card */
+#fbimage, #sbimage, #tbimage {
+    position: absolute !important;
+    left: 20px !important;
+    top: 20px !important;
+    width: 100px !important;
+    margin: 0 !important;
+    float: none !important;
+}
+
+#fbimage img, #sbimage img, #tbimage img {
+    width: 100% !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+/* Fix the text so it aligns properly next to the image */
+.firstbook > h2, .firstbook > p,
+.secondbook > h2, .secondbook > p,
+.thirdbook > h2, .thirdbook > p {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
+}
+
+.firstbook > h2, .secondbook > h2, .thirdbook > h2 {
+    font-size: 18px !important;
+    margin-top: 10px !important;
+}
+
+/* Pin the button to the top right of the book card */
+#bookbuttons {
+    position: absolute !important;
+    right: 20px !important;
+    top: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+}
+
+/* 6. FORCE FOOTER TO STAY AT THE BOTTOM */
+footer {
+    clear: both !important;
+    width: 100% !important;
+    margin-top: 40px !important;
+    position: relative !important;
+    z-index: 99 !important;
+    box-sizing: border-box !important;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr !important;
+    }
+    .currentLoans, 
+    .recs, 
+    .workinghours {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+    .fourcards {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .fourcards {
+        grid-template-columns: 1fr !important;
+    }
+    .firstbook, .secondbook, .thirdbook {
+        padding: 140px 20px 20px 20px !important; /* Move text below image on mobile */
+    }
+    #bookbuttons {
+        top: auto !important;
+        bottom: 20px !important;
+    }
+}
+
+/* =========================================
+   FIX: ALIGN RECOMMENDED WITH BOOKS (GRID)
+   ========================================= */
+
+/* 1. Make sure the main container is a grid */
+main {
+    display: grid !important;
+    grid-template-columns: 1fr 340px !important; 
+    gap: 30px !important;
+    align-items: start !important; /* Prevents items from stretching to match heights */
+}
+
+/* 2. Force the sidebar to start exactly where the books start */
+.recs {
+    grid-column: 2 !important;
+    grid-row: 5 !important; /* Targets the row where the books are */
+    align-self: start !important; /* Forces it to the top of that row */
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+/* 3. Keep Working Hours directly below it */
+.workinghours {
+    grid-column: 2 !important;
+    grid-row: 6 !important; /* Sits in the next available row */
+    align-self: start !important;
+    margin-top: 0 !important;
+}
+
+/* 4. Make sure the books take up the left column */
+.currentLoans {
+    grid-column: 1 !important;
+    grid-row: 5 !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* =========================================
+   FIX: MOVE WORKING HOURS HIGHER
+   ========================================= */
+
+.workinghours {
+    margin-top: -700px !important; 
+}
+
+
+/* 1. Make the book container a Flexbox column */
+#FBheader, #SBheader, #TBheader {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures it stretches if the grid makes cards equal height */
+}
+
+/* 2. Push the button container to the bottom */
+.book-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* ✨ This is the magic line that pushes it down */
+    padding-top: 15px; /* Gives some breathing room above the buttons */
+}
+
+/* 3. Style the buttons (if you haven't already) */
+.book-actions button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.btn-borrow {
+    background: #000;
+    color: #fff;
+    border: none;
+}
+.btn-borrow:disabled { background: #888; cursor: not-allowed; }
+
+.btn-reserve {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+.btn-reserve:disabled { color: #888; border-color: #eee; cursor: not-allowed; }
+
+.btn-fav {
+    background: #fff;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+.btn-fav:disabled { background: #e74c3c; color: #fff; cursor: not-allowed; }

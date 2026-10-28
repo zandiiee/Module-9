@@ -21,6 +21,10 @@ body{
     padding:30px 20px;
     
 }
+#profileLink a{
+    text-decoration: none;
+    color: black;
+}
 #homelink,
 #searchlink,
 #mybooksLink,
@@ -729,7 +733,8 @@ footer{
     display:flex;
     gap:30px;
     background-color: white;
-    padding:50px 20px;
+    padding:50px 90px;
+    margin-bottom: -1500px;
 }
 #footerLinks{
     text-align: center;

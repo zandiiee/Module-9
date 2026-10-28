@@ -42,7 +42,10 @@ body{
   background: #007bff;
   transition: width 0.3s ease;
 }
-
+#profileLink a{
+  text-decoration:none;
+  color:black;
+}
 #homelink:hover,
 #searchlink:hover,
 #mybooksLink:hover,

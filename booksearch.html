@@ -34,12 +34,10 @@
                 Search Books
             </div>
 
-            <div id="mybooksLink">
-                My Books
-            </div>
+       
 
             <div id="profileLink">
-                Profile
+               <a href="profile.html"> Profile </a>
             </div>
 
         
@@ -71,6 +69,7 @@
             <div id="searchicon"> 
             <i class="fa-solid fa-filter" style="color: rgb(116, 192, 252);"></i>
             </div>
+            <!-- Filter by ISBN or Author (Optional feature, we will link the main one) -->
             <input type="text" placeholder="Title, Author or ISBN">
         </div>
 
@@ -78,11 +77,13 @@
             <div id="searchicon"> 
             <i class="fa-solid fa-magnifying-glass" style="color: rgb(177, 151, 252);"></i>
             </div>
-            <input type="text" placeholder="Computer Science, Fiction" >
+            <!-- ADDED ID HERE -->
+            <input type="text" id="searchInput" placeholder="Search by Title, Author, or Genre..." >
         </div>
 
         <div id="catalog">
-            <p><a href="#">Search Catalog </a></p>
+            <!-- ADDED ID HERE -->
+            <p><button id="searchBtn" style="background: none; border: none; cursor: pointer; color: inherit; font-family: inherit; font-size: inherit;"><a href="#">Search Catalog</a></button></p>
         </div>
 
       </section>
@@ -121,57 +122,15 @@
 
       <div id="searchresultsheader"> 
       <h3>Catalog Query</h3>
-      <p>Found 120,413 results matching primary collections</p>
+      <!-- ADDED ID HERE for the results count -->
+      <p id="resultsCount">Loading catalog...</p>
       </div>
 
       <section class="serachresults">
-
-        <div class="grid">
-            <div>
-                <img src="./images/doriangray.png" width="100">
-                <h4><a href="details.html"> The Picture Of Dorian Gray </a> </h4>
-                <p>By Oscar Wilde</p>
-                <p> A young man remains physically young while a mysterious portrait ages and reflects the consequences of his immoral choices.</p>
-                <p style="color:purple;">Based off your previous checked out books, you would enjoy it.</p>
-            </div>
-            <div>
-                <img src="./images/crucible.png"  width="100">
-                <h4>The Crucible</h4>
-                <p>By Arthur Miller</p>
-                <p> A dramatic story about the Salem witch trials, exploring fear, accusations, reputation, and mass hysteria.</p>
-                <p style="color: purple;">Popular book and is checked out regularly.</p>
-            </div>
-            <div>
-                <img src="./images/othello.png" width="100">
-                <h4>Othello</h4>
-                <p>By William Shakespeare</p>
-                <p> A tragic story of jealousy and betrayal in which Othello is manipulated into doubting his wife and those around him.</p>
-                <p style="color: purple;">Popular book and is checked out regularly.</p>
-            </div>
-            <div>
-                <img src="./images/whydidntyou.png" width="100">
-                <h4>Why Didn't You Tell Me?</h4>
-                <p>By Carmen Rita Wong</p>
-                <p> A memoir about family secrets, identity, and discovering hidden truths about one's family history.</p>
-                <p style="color: purple;">Based off your previous checked out books, you would enjoy it.</p>
-            </div>
-            <div>
-                <img src="./images/wuthering.png" width="100">
-                <h4>Wuthering Heights</h4>
-                <p>Emily Bronte</p>
-                <p> A dark and passionate story about love, revenge, and obsession between Heathcliff and Catherine Earnshaw.</p>
-                <p style="color: purple;">Based off your previous checked out books, you would enjoy it.</p>
-            </div>
-            <div>
-                <img src="./images/phantom.png" width="100">
-                <h4>Phantom Of The Opera</h4>
-                <p>By Gaston Leroux</p>
-                <p> A mysterious story about a masked figure living beneath an opera house who becomes obsessed with a young singer.</p>
-                <p style="color: purple;">Popular book and is checked out regularly.</p>
-            </div>
+        <!-- ADDED ID HERE to clear out the hardcoded HTML and put live data -->
+        <div class="grid" id="searchResultsGrid">
+            <!-- JS will inject the books here -->
         </div>
-
-
       </section>
 
     </main>
@@ -191,5 +150,7 @@
         </div>
     </footer>
     
+    <!-- Link to the search JavaScript file -->
+    <script type="module" src="./javascript/booksearch.js"></script>
 </body>
 </html>

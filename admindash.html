@@ -38,14 +38,10 @@
                 </a>
             </div>
 
-            <div id="mybooksLink">
-                <a href="bookManagement.html">
-                My Books
-                 </a>
-            </div>
+    
 
             <div id="profileLink">
-                Profile
+              <a href="profile.html">  Profile</a> 
             </div>
 
         
@@ -71,7 +67,7 @@
             <div id="welcomepar"> 
 
             <h2>Librarian Administration Console</h2>
-            <p>Last synced 2 minutes ago.</p>
+          
             </div>
 
             <div class="welcomebuttons">
@@ -87,7 +83,7 @@
 
         </section>
 
-        <section class="fourcards"> 
+                <section class="fourcards"> 
 
         <article class="totalbooks">
             <div id="totalheader"> 
@@ -95,7 +91,7 @@
             <h3>Total Library Books</h3>
             </div>
 
-            <h2><span>120,418</span>  Books </h2>
+            <h2><span id="totalBooksCount">0</span> Books </h2>
         </article>
 
         <article class="available">
@@ -104,7 +100,7 @@
             <h3>Available Books on Shelf</h3>
             </div>
 
-            <h2><span>98,345</span> Books</h2>
+            <h2><span id="availableBooksCount">0</span> Books</h2>
         </article>
 
         <article class="borrowed">
@@ -113,7 +109,7 @@
             <h3>Currently Borrowed</h3>
             </div>
 
-            <h2><span>26,984</span></h2>
+            <h2><span id="borrowedBooksCount">0</span></h2>
         </article>
 
         <article class="members">
@@ -122,133 +118,55 @@
             <h3>Total Active Members</h3>
             </div>
 
-            <h2><span>14,590</span>Members</h2>
+            <h2><span id="totalMembersCount">0</span> Members</h2>
 
             <div class="progress">
-            <div class="progress-fill"></div>
+            <div class="progress-fill" id="membersProgressBar"></div>
             </div>
-
 
         </article>
 
         </section>
 
         <section class="middle-section"> 
-        <section class="recents">
-            <article class="recentheader">
-                <div id="par">
-                <h2>Recent Circulation Activity </h2>
-                <p>Overview of all book activity.</p>
-                </div>
+               <section class="recents">
+                    <article class="recentheader">
+                        <div id="par">
+                            <h2>Recent Circulation Activity </h2>
+                            <p>Overview of all book activity.</p>
+                        </div>
+                    </article>
 
-            </article>
+                    <!-- CLEAN CONTAINER: JS will inject the books here -->
+                    <section class="bookdisplay" id="circulationList">
+                        <!-- Intentionally left blank. Do not put hardcoded books here. -->
+                    </section>
+                </section>
 
-            <section class="bookdisplay"> 
-            <article class="firstbook">
-                <div id="FBheader">
-                    <div id="fbimage"> 
-                        <img src="./images/doriangray.png" width="100">
-                    </div>
-                    <h2> The Picture of Dorian Gray</h2>
-                    <p>By Oscar Wilde - Published 1890 - Physical copy</p>
-                    <p> Borrowed: 24 September 2026</p>
-                    <p>Due: 5 October 2026 </p>
+                    <section class="updates">
+                        <div id="updateheader">
+                            <h2>Updates</h2>
+                            <p style="color: rgb(77, 198, 238);"> View all</p>
+                        </div>
+                        
+                        <div id="update1">
+                            <h2>Returned Books</h2>
+                            <!-- Added id="returnedBooksText" -->
+                            <p id="returnedBooksText">Loading...</p>
+                        </div>
 
-                </div>
+                        <div id="update2">
+                            <h2>System Updates</h2>
+                            <p>The system is experiencing no issues & no new issues have been reported.</p>
+                        </div>
 
-            </article>
-
-             <article class="secondbook">
-                <div id="SBheader">
-                    <div id="sbimage"> 
-                        <img src="./images/crucible.png" width="100">
-                    </div>
-                    <h2>The Crucible</h2>
-                    <p>By Arthur Miller - Published 1950 - Digital Copy</p>
-                    <p> Borrowed: 2 September 2026</p>
-                    <p>Due: 16 September 2026 </p>
-
-                </div>
-
-            </article>
-
-            <article class="thirdbook">
-                <div id="TBheader">
-                    <div id="tbimage">
-                        <img src="./images/othello.png" width="100">
-                    </div>
-                    <h2>Othello</h2>
-                    <p>By William Shakespeare - Published 1650 - Digital Copy</p>
-                    <p> Borrowed: 22 September 2026</p>
-                    <p>Due:6 October 2026 </p>
-
-
-                </div>
-
-            </article>
-
+                        <div id="update3">
+                            <h2>Member Check-in</h2>
+                            <!-- Added id="staffCheckinText" -->
+                            <p id="staffCheckinText">Loading...</p>
+                        </div>
             </section>
 
-        </section>
-
-         <section class="updates">
-                <div id="updateheader">
-                    <h2>Updates</h2>
-                    <p style="color: rgb(77, 198, 238);"> View all</p>
-                </div>
-                
-               <div id="update1">
-                <div id="up1"> 
-                </div>
-                <h2>Returned Books</h2>
-                <p>7000 books have been returned within the last 72hours.</p>
-               </div>
-
-                <div id="update2">
-                <div id="up2"> 
-                </div>
-                <h2>System Updates</h2>
-                <p>The system is experiencing no issues & no new issues have been reported </p>
-               </div>
-
-                <div id="update3">
-                <div id="up3">
-                </div>
-                <h2> Staff Check-in</h2>
-                <p> 6 out of  15 staff members have clocked in today.</p>
-               </div>
-
-            </section>
-
-            </section>
-
-            <section class="navbox"> 
-            <h2>Quick Navigation to Management</h2>
-            <p class="subtitle">Direct access to primary administrative repositories and controls.</p>
-
-            <div class="grid">
-
-                <div class="card">
-                <p class="card-title">Book Inventory Management</p>
-                <p class="card-desc">Cataloging, batch ISBN ingest & tags</p>
-                </div>
-
-                <div class="card">
-                <p class="card-title">Member Directory</p>
-                <p class="card-desc">Faculty, student  & guest patron cards</p>
-                </div>
-
-                <div class="card">
-                <p class="card-title">Loan Analytics</p>
-                <p class="card-desc">Peak borrowing trends & turnover rate</p>
-                </div>
-
-                <div class="card">
-                <p class="card-title">Fine & Overdue Records</p>
-                <p class="card-desc">Settlement ledger, waivers & notices</p>
-                </div>
-
-            </div>
             </section>
 
             <footer>
@@ -267,6 +185,6 @@
             </footer>
 
             
-    
+    <script type="module" src="./javascript/admin.js"></script>
 </body>
 </html>

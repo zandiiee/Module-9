@@ -17,14 +17,11 @@
 <body>
     <header>
 
-    
-
         <section class="memberdash">
             
         <div id="dashLogo">
         <img src="./images/libra_logo.png" width="100">
         </div>
-        <h2>Libra</h2>
 
         <div class="headerLinks">
 
@@ -38,14 +35,9 @@
                 </a>
             </div>
 
-            <div id="mybooksLink">
-                <a href="bookManagement.html">
-                My Books
-                 </a>
-            </div>
 
             <div id="profileLink">
-                Profile
+             <a href="profile.html"> Profile</a>  
             </div>
 
         
@@ -69,18 +61,6 @@
       <section class="manageBody"> 
     <div class="container">
         
-        <!-- Top Navigation -->
-        <div class="top-nav">
-            <div class="nav-left">
-                <span><i class="fa-solid fa-gear"></i> Admin Portal</span>
-                <span>Book Management</span>
-            </div>
-            <div class="nav-right">
-                <span class="status-dot"></span>
-                CATALOG SYNC: ACTIVE (124,580 VOLUMES)
-            </div>
-        </div>
-
         <!-- Header Section -->
         <div class="header-section">
             <div class="header-title">
@@ -93,15 +73,11 @@
         <div class="controls-bar">
             <div class="search-filters">
                 <div class="search-input-wrapper">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Filter by title, ISBN, or author...">
-                    <span class="search-shortcut">⌘K</span>
+                    <input type="text" placeholder="Filter by title or author...">
                 </div>
+                <!-- Optional: If you removed the categories, you might want to remove this dropdown too. I will leave it here but you can delete it if you wish. -->
                 <select class="filter-dropdown">
                     <option>All Categories</option>
-                    <option>Computer Science</option>
-                    <option>Design & UX</option>
-                    <option>Architecture</option>
                 </select>
                 <select class="filter-dropdown">
                     <option>All Copies</option>
@@ -121,105 +97,14 @@
                 <thead>
                     <tr>
                         <th>BOOK TITLE & AUTHOR</th>
-                        <th>ISBN & SHELF</th>
-                        <th>CATEGORY</th>
                         <th>TOTAL / AVAILABLE COPIES</th>
                         <th>STATUS</th>
                         <th>ACTIONS</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Row 1: The Fall of Icarus -->
+                <tbody id="inventoryTableBody">
                     <tr>
-                        <td>
-                            <div class="book-info">
-                                <div class="book-cover c1"><i class="fa-solid fa-book"></i></div>
-                                <div>
-                                    <div class="book-title">The Fall of Icarus</div>
-                                    <div class="book-author">Ovid</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="isbn-shelf">
-                                <div><i class="fa-regular fa-barcode"></i> 978-0140447897</div>
-                                <div class="shelf"><i class="fa-solid fa-layer-group"></i> Shelf CLA-102</div>
-                            </div>
-                        </td>
-                        <td><span class="category-badge phil">Classical Literature</span></td>
-                        <td>
-                            <div class="copies-info">5 / 5 Available</div>
-                            <div class="progress-bar"><div class="progress-fill green" style="width: 100%;"></div></div>
-                        </td>
-                        <td><span class="status-badge status-available">Available</span></td>
-                        <td>
-                            <div class="actions">
-                                <i class="fa-solid fa-pencil"></i>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <!-- Row 2: You -->
-                    <tr>
-                        <td>
-                            <div class="book-info">
-                                <div class="book-cover c2"><i class="fa-solid fa-book"></i></div>
-                                <div>
-                                    <div class="book-title">You</div>
-                                    <div class="book-author">Caroline Kepnes</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="isbn-shelf">
-                                <div><i class="fa-regular fa-barcode"></i> 978-1476786496</div>
-                                <div class="shelf"><i class="fa-solid fa-layer-group"></i> Shelf FIC-433</div>
-                            </div>
-                        </td>
-                        <td><span class="category-badge">Thriller Fiction</span></td>
-                        <td>
-                            <div class="copies-info">2 / 4 Available <span class="copies-sub">2 on loan</span></div>
-                            <div class="progress-bar"><div class="progress-fill blue" style="width: 50%;"></div></div>
-                        </td>
-                        <td><span class="status-badge status-available">Available</span></td>
-                        <td>
-                            <div class="actions">
-                                <i class="fa-solid fa-pencil"></i>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <!-- Row 3: Crime and Punishment -->
-                    <tr>
-                        <td>
-                            <div class="book-info">
-                                <div class="book-cover c3"><i class="fa-solid fa-book"></i></div>
-                                <div>
-                                    <div class="book-title">Crime and Punishment</div>
-                                    <div class="book-author">Fyodor Dostoevsky</div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="isbn-shelf">
-                                <div><i class="fa-regular fa-barcode"></i> 978-0143058144</div>
-                                <div class="shelf"><i class="fa-solid fa-layer-group"></i> Shelf CLA-505</div>
-                            </div>
-                        </td>
-                        <td><span class="category-badge arch">Classic Fiction</span></td>
-                        <td>
-                            <div class="copies-info">0 / 3 Available <span class="copies-sub">3 on loan</span></div>
-                            <div class="progress-bar"><div class="progress-fill yellow" style="width: 0%;"></div></div>
-                        </td>
-                        <td><span class="status-badge status-out">Checked Out</span></td>
-                        <td>
-                            <div class="actions">
-                                <i class="fa-solid fa-pencil"></i>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </div>
-                        </td>
+                        <td colspan="4" style="text-align: center; padding: 20px;">Loading live inventory data...</td>
                     </tr>
                 </tbody>
             </table>
@@ -227,70 +112,23 @@
 
         <!-- Pagination -->
         <div class="pagination-container">
-            <!-- Updated the records count to reflect 3 items -->
-            <div>Showing 1-3 of 3 records</div>
-            <div class="pagination-controls">
-                <div class="page-btn"><i class="fa-solid fa-angles-left"></i></div>
-                <div class="page-btn"><i class="fa-solid fa-angle-left"></i></div>
-                <div class="page-btn active">1</div>
-                <div class="page-btn"><i class="fa-solid fa-angle-right"></i></div>
-                <div class="page-btn"><i class="fa-solid fa-angles-right"></i></div>
-            </div>
-        </div>
 
         <!-- Bottom Panels -->
         <div class="bottom-panels">
             
-            <!-- Panel 1: Category Distribution -->
+            <!-- Panel 1: Category Distribution (Genre Counts) -->
             <div class="panel">
                 <div class="panel-header">
                     <span>Category Distribution</span>
                     <i class="fa-solid fa-circle-info"></i>
                 </div>
-                <div class="dist-content">
-                    <div class="donut-chart">
-                        <i class="fa-solid fa-book-open donut-inner-icon"></i>
-                    </div>
-                    <div class="legend">
-                        <div class="legend-item">
-                            <span class="legend-dot blue"></span>
-                            <span>Fiction & Thriller (45%)</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-dot purple"></span>
-                            <span>Classics (25%)</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-dot grey"></span>
-                            <span>Philosophy & Lit (30%)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="dist-content" style="display: block; padding: 10px 0;">
+                    
+                    <!-- JS will build the list of numbers here -->
+                    <ul id="genreCountList" style="list-style: none; padding: 0; margin: 0; width: 100%;">
+                        <li style="padding: 10px; color: #666;">Calculating genres...</li>
+                    </ul>
 
-            <!-- Panel 2: Stack Audit Status -->
-            <div class="panel">
-                <div class="panel-header">
-                    <span>Stack Audit Status</span>
-                    <i class="fa-regular fa-circle-check success"></i>
-                </div>
-                <p class="audit-text">Automated RFID inventory scan completed today at 04:30 AM. 4 stray volumes flagged for reshelving in Wing C.</p>
-                <div class="audit-footer">
-                    <span class="audit-time">LAST SCAN: 6H AGO</span>
-                    <a href="#" class="link-btn">Run Stack Scan</a>
-                </div>
-            </div>
-
-            <!-- Panel 3: Lending Bottlenecks -->
-            <div class="panel">
-                <div class="panel-header">
-                    <span>Lending Bottlenecks</span>
-                    <i class="fa-solid fa-hourglass-half warning"></i>
-                </div>
-                <p class="bottleneck-text">14 titles have hold queues exceeding 4+ patrons. Recommended acquisition order: 12 additional copies.</p>
-                <div class="bottleneck-footer">
-                    <span class="alert-label">HIGH DEMAND ALERT</span>
-                    <a href="#" class="link-btn">Review Requisitions</a>
                 </div>
             </div>
 
@@ -313,6 +151,7 @@
         </div>
     </footer>
 
-    
+    <!-- Added link to JS file -->
+    <script type="module" src="javascript/management.js"></script>
 </body>
 </html>
